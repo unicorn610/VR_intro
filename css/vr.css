@@ -1,0 +1,366 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+/* nav */
+.navbar {
+    background: rgba(25, 25, 25, 0.3) !important;
+}
+
+.navbar a {
+    color: #fff;
+}
+
+.navbar .logo {
+    padding: 0 20px;
+    height: 25px;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #ffcd00;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.hvr-underline-from-left:before {
+    /*background: #f5d95a;*/
+    background: #ffcd00;
+}
+
+/* scene */
+.scene {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Home */
+.carousel-inner {
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel-inner .carousel-item {
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scene-cover {
+    position: absolute;
+    left: 15%;
+    bottom: 5%;
+}
+
+.scene-cover img {
+    width: 30vw;
+}
+
+.scene-title {
+    position: absolute;
+    right: 20%;
+    bottom: 40%;
+    color: #fff;
+}
+
+/* Introduction */
+.render-animation {
+    position: relative;
+}
+
+.render-animation .real {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -ms-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
+}
+
+.render-animation:hover .real {
+    opacity: 1;
+}
+
+
+/* Application */
+#app .card {
+    margin-bottom: 2rem;
+}
+
+/* Product */
+#products {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+
+#products::after {
+    content: "";
+    background: url("../imgs/digital_map.png") no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#products .panel {
+    position: relative;
+    height: 70vh;
+}
+
+#products .panel img {
+    width: 20vw;
+}
+
+#products .panel .oclus img {
+    width: 30vw;
+}
+
+#products .panel .osvr {
+    margin-left: 10vw;
+    margin-top: 10vh;
+}
+
+#products .panel .oclus {
+    margin-left: 25vw;
+    margin-top: 20vh;
+}
+
+#products .panel .vive {
+    margin-left: 55vw;
+    margin-top: 10vh;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    background: rgba(120, 120, 120, 1);
+    color: #fff;
+    text-align: center;
+    min-height: 50px;
+    padding: 1em 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration-line: none;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+.footer a:hover {
+    color: #ffcd00;
+}
+
+.footer .logo {
+    display: inline-block;
+    width: 15vw;
+    /*margin-top: 20px;*/
+}
+
+.footer .logo img {
+    width: 100%;
+}
+
+.footer .title {
+    text-align: left;
+}
+
+.footer .foot-reference {
+    text-align: left;
+}
+
+.footer .foot-reference .list-group-flush .list-group-item {
+    background: transparent;
+    font-size: .8em;
+}
+
+.footer .foot-social {
+    font-size: 3rem;
+}
+
+.footer .license {
+    font-size: 8px;
+}
+
+
+/* Go Top */
+.gotop {
+    position: fixed;
+    right: 2vw;
+    bottom: 5%;
+    font-size: 2em;
+    border: 5px solid #191919;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 42px;
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    border-radius: 100px;
+}
+.gotop a {
+    color: #191919;
+}
+
+.gotop:hover {
+    background-color: rgba(245,217,90,.8);
+}
+
+/* Responsive */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Home */
+    .scene-cover img {
+        width: 60vw;
+    }
+
+    .scene-title {
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        font-size: 1.5em;
+        color: #fff;
+    }
+
+    /* Product */
+    #products .panel img {
+        width: 30vw;
+    }
+
+    #products .panel .oclus img {
+        width: 40vw;
+    }
+
+    #products .panel .osvr {
+        margin-left: 20vw;
+        margin-top: 0vh;
+    }
+
+    #products .panel .oclus {
+        margin-left: 30vw;
+        margin-top: 30vh;
+    }
+
+    #products .panel .vive {
+        margin-left: 50vw;
+        margin-top: 55vh;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Home */
+    .scene-cover {
+        position: absolute;
+        left: 15%;
+        bottom: 5%;
+    }
+
+    .scene-cover img {
+        width: 60vw;
+    }
+
+    .scene-title {
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        bottom: auto;
+        font-size: 1.5em;
+        color: #fff;
+    }
+
+    /* Product */
+    #products .panel img {
+        width: 30vw;
+    }
+
+    #products .panel .oclus img {
+        width: 40vw;
+    }
+
+    #products .panel .osvr {
+        margin-left: 5vw;
+        margin-top: 0vh;
+    }
+
+    #products .panel .oclus {
+        margin-left: 20vw;
+        margin-top: 30vh;
+    }
+
+    #products .panel .vive {
+        margin-left: 40vw;
+        margin-top: 55vh;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Home */
+    .scene-cover {
+        position: absolute;
+        left: 15%;
+        bottom: 5%;
+    }
+
+    .scene-cover img {
+        width: 40vw;
+    }
+
+    .scene-title {
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        bottom: auto;
+        font-size: 1.5em;
+        color: #fff;
+    }
+
+    /* Product */
+    #products .panel .oclus img {
+        width: 25vw;
+    }
+
+    #products .panel .oclus {
+        margin-left: 31vw;
+        margin-top: 10vh;
+    }
+
+    #products .panel .vive {
+        margin-top: 5vh;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
